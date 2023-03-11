@@ -36,6 +36,7 @@ hr {
 
 .meme {
   margin-bottom: 1em;
+  cursor: pointer;
 }
 
 .meme .meme__header {
@@ -54,4 +55,45 @@ hr {
 
 .meme .meme__icon img {
   height: 100%;
+}
+
+.meme .meme__icon-close {
+  display: none;
+}
+
+.meme .meme__image {
+  display: none;
+}
+
+.meme:hover .meme__image {
+  display: block;
+}
+
+.meme:hover .meme__icon-close {
+  display: block;
+}
+
+.meme:hover .meme__icon-plus {
+  display: none;
+}
+
+.meme_active .meme__image {
+  display: block;
+}
+
+.meme:active .meme__title {
+  color: blue;
+}
+
+/* label {
+  display: block;
+  border: red 2px solid;
+} */
+
+.meme__radio:checked + label .meme__image {
+  display: block;
+}
+
+.meme__radio {
+  display: none;
 }
