@@ -1,0 +1,57 @@
+@import './normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+.bayan {
+  padding-top: 1em;
+
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 90%;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 900;
+  margin-bottom: 0.5em;
+}
+
+hr {
+  color: #d3d3d3;
+  background-color: #d3d3d3;
+  height: 0.01em;
+  margin-bottom: 1em;
+}
+
+.meme {
+  margin-bottom: 1em;
+}
+
+.meme .meme__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.meme .meme__header .meme__title {
+  font-size: 1.2em;
+}
+
+.meme .meme__icon {
+  height: 1em;
+}
+
+.meme .meme__icon img {
+  height: 100%;
+}
