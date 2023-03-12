@@ -15,13 +15,7 @@ body {
 }
 
 .container {
-  width: 40%;
-}
-
-img {
-  width: 0;
-  display: block;
-  transition: 0.5s all;
+  width: 90%;
 }
 
 h1 {
@@ -59,17 +53,21 @@ hr {
 
 .meme__icon {
   height: 1rem;
-  display: none;
+  width: 1rem;
+  opacity: 0;
+
+  transition: 0.5s all;
 }
 
 .meme__icon img {
   height: 100%;
+  display: block;
 }
-/* 
-.meme__image {
-  display: none;
-  padding-bottom: 1rem;
-} */
+.meme__icon svg {
+  height: 100%;
+  display: block;
+}
+
 .meme__image {
   display: flex;
   justify-content: center;
@@ -77,13 +75,21 @@ hr {
   max-height: 0;
   width: 100%;
   overflow: hidden;
+  opacity: 0;
 
+  transition: 0.5s all;
+}
+
+.meme__image img {
+  width: 0;
+  display: block;
   transition: 0.5s all;
 }
 
 .meme__radio:checked + label .meme__image {
   max-height: 30rem;
   width: 100%;
+  opacity: 1;
   padding-bottom: 1rem;
 }
 
@@ -95,54 +101,51 @@ hr {
   color: #000;
 }
 
+.meme__radio:checked + label .meme__icon {
+  transform: rotate(45deg);
+}
+
 .meme__radio {
   display: none;
 }
 
-
-/* .meme:hover {
-  border: 1px red solid;
-} */
-
-.meme:hover .meme__image {
-  max-height: 30rem;
-  width: 100%;
-  padding-bottom: 1rem;
-}
-.meme:hover .meme__image img {
-  width: 100%;
-}
-
-/* .bayan__memes:hover .meme__title {
-  color: #000;
-}
-
-.bayan__memes:hover .meme__icon {
-  display: block;
-}
-
-.meme:hover .meme__image {
-  display: block;
-}
-
-.meme:hover {
-  max-height: 23rem;
-}
-
-.meme:hover .meme__icon {
-  transform: rotate(45deg);
-}
-
-.meme:active .meme__title {
-  color: blue;
-}
-
 .meme:active {
   opacity: 0.8;
-} */
+}
+
+.meme:active .meme__header .meme__title {
+  color:blue;
+}
+
+.meme:active .meme__header .meme__icon svg {
+  fill: blue;
+  stroke: blue;
+}
 
 
-/* .meme:hover .meme__image {
-  display: block;
-  height: 20rem;
+@media (hover:hover) {
+  .meme:hover .meme__image {
+    max-height: 30rem;
+    width: 100%;
+    opacity: 1;
+    padding-bottom: 1rem;
+  }
+
+  .meme:hover .meme__image img {
+    width: 100%;
+  }
+
+  .bayan__memes:hover .meme__title {
+    color: #000;
+  }
+
+  .bayan__memes:hover .meme__icon {
+    opacity: 1;
+  }
+}
+
+/* @media (min-width: 820px) {
+  .container {
+    width: 50%;
+  }
 } */
