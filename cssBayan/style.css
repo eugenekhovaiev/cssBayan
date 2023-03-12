@@ -82,7 +82,7 @@ hr {
 }
 
 .meme__radio:checked + label .meme__image {
-  max-height: 50rem;
+  max-height: 100rem;
   width: 100%;
   opacity: 1;
   padding-bottom: 1rem;
@@ -120,7 +120,7 @@ hr {
 
 @media (hover:hover) {
   .meme:hover .meme__image {
-    max-height: 50rem;
+    max-height: 100rem;
     width: 100%;
     opacity: 1;
     padding-bottom: 1rem;
